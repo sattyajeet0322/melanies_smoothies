@@ -19,7 +19,7 @@ st.write('The Name on your Smoothie will be:', name_on_order)
 
 cnx = st.connection("snowflake")
 session = cnx.session()
-
+stop()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col("FRUIT_NAME"),col(search_on))
 pd_df = my_dataframe.to_pandas()
 #pd.write(my_dataframe)
